@@ -16,14 +16,19 @@ const completForm = (dados) => {
 const pesquisarCep = async () => {
     const inputCep = cep.value;
     const url = `http://viacep.com.br/ws/${inputCep}/json/`;
-    const response = await fetch(url);
-    const dados = await response.json();
-    
-    if(dados.hasOwnProperty('erro')) {
+    if (cepValido(cep)) {
+        const response = await fetch(url);
+        const dados = await response.json();
+
+        if (dados.hasOwnProperty('erro')) {
         endereco.value = 'CEP não encontrado!';
+        } else {
+            completForm(dados); 
+        } 
     } else {
-       completForm(dados); 
+        endereco.value = 'CEP incorreto, tente novamente!';
     }
+    
 };
 
 cep.addEventListener('focusout', pesquisarCep); 
