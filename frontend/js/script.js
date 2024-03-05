@@ -13,10 +13,12 @@ const completForm = (dados) => {
     estado.value = dados.uf;
 };
 
+const cepValido = (inputCep) => inputCep.length == 8 && /^[0-9]+$/.test(inputCep);
+
 const pesquisarCep = async () => {
     const inputCep = cep.value;
     const url = `http://viacep.com.br/ws/${inputCep}/json/`;
-    if (cepValido(cep)) {
+    if (cepValido(inputCep)) {
         const response = await fetch(url);
         const dados = await response.json();
 
@@ -26,7 +28,7 @@ const pesquisarCep = async () => {
             completForm(dados); 
         } 
     } else {
-        endereco.value = 'CEP incorreto, tente novamente!';
+        endereco.value = 'CEP incorreto, Digite um CEP válido!';
     }
     
 };
