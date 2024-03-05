@@ -13,7 +13,9 @@ const completForm = (dados) => {
     estado.value = dados.uf;
 };
 
-const cepValido = (inputCep) => inputCep.length == 8 && /^[0-9]+$/.test(inputCep);
+const eNumero = (numero) => /^[0-9]+$/.test(numero); 
+
+const cepValido = (inputCep) => inputCep.length == 8 && eNumero(inputCep);
 
 const pesquisarCep = async () => {
     const inputCep = cep.value;
