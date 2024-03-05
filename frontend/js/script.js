@@ -2,10 +2,16 @@
 
 const cep = document.querySelector('#cep');
 const endereco = document.querySelector('#endereco');
+const bairro = document.querySelector('#bairro');
+const cidade = document.querySelector('#cidade');
+const estado = document.querySelector('#estado');
+
 
 const completForm = (dadosAll) => {
     endereco.value = dadosAll.logradouro;
-    
+    bairro.value = dadosAll.bairro;
+    cidade.value = dadosAll.localidade;
+    estado.value = dadosAll.uf;
 };
 
 const pesquisarCep = async () => {
