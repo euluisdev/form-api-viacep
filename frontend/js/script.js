@@ -6,6 +6,13 @@ const bairro = document.querySelector('#bairro');
 const cidade = document.querySelector('#cidade');
 const estado = document.querySelector('#estado');
 
+const limparForm = (dados) => {
+    endereco.value = '';
+    bairro.value = '';
+    cidade.value = '';
+    estado.value = '';
+};
+
 const completForm = (dados) => {
     endereco.value = dados.logradouro;
     bairro.value = dados.bairro;
@@ -18,6 +25,8 @@ const eNumero = (numero) => /^[0-9]+$/.test(numero);
 const cepValido = (inputCep) => inputCep.length == 8 && eNumero(inputCep);
 
 const pesquisarCep = async () => {
+    limparForm();
+
     const inputCep = cep.value;
     const url = `http://viacep.com.br/ws/${inputCep}/json/`;
     if (cepValido(inputCep)) {
