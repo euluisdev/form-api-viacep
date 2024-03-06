@@ -6,25 +6,27 @@ const bairro = document.querySelector('#bairro');
 const cidade = document.querySelector('#cidade');
 const estado = document.querySelector('#estado');
 
-const limparForm = (dados) => {
+const limparForm = (dados) => { //this clear the form field
     endereco.value = '';
     bairro.value = '';
     cidade.value = '';
     estado.value = '';
 };
 
-const completForm = (dados) => {
+const completForm = (dados) => { // this fill in the form fields
     endereco.value = dados.logradouro;
     bairro.value = dados.bairro;
     cidade.value = dados.localidade;
     estado.value = dados.uf;
 };
 
-const eNumero = (numero) => /^[0-9]+$/.test(numero); 
+const eNumero = (numero) => /^[0-9]+$/.test(numero);  //this check if a string is made up of numbers only
+
 
 const cepValido = (inputCep) => inputCep.length == 8 && eNumero(inputCep);
+// that checks if the CEP is valid
 
-const pesquisarCep = async () => {
+const pesquisarCep = async () => { //this searche the zip code and fill out the form
     limparForm();
 
     const inputCep = cep.value;
