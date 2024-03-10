@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <form id="formulario" acao="/backend/salvar-form.php" method="POST" class="container">
-        <input type="hidden" name="action" value="Enviar">
+    <form id="formulario" action="./salvar-form.php" method="POST" class="container">
+        <input type="hidden" name="acao" value="Cadastrar">
         <h1 class="title">Cadastro</h1>
         <div class="row">
             <div class="inputbox">
@@ -36,8 +36,7 @@
                 <input type="number" id="numero" name="numero" required>
                 <label for="numero">Número</label>
             </div>
-            <!-- </div> -->
-            <!-- <div class="row"> -->
+
             <div class="inputbox">
                 <input type="text" id="bairro" name="bairro" required>
                 <label for="bairro">Bairro</label>  
