@@ -1,59 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js" defer></script>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <script src="/frontend/js/script.js" defer></script>
     <title>Cadastro</title>
 </head>
 
 <body>
-    <main class="container">
+    <form id="formulario" acao="/backend/salvar-form.php" method="POST" class="container">
+        <input type="hidden" name="action" value="Enviar">
         <h1 class="title">Cadastro</h1>
         <div class="row">
             <div class="inputbox">
-                <input type="text" id="nome" required>
+                <input type="text" id="nome" name="nome" required>
                 <label for="nome">Nome</label>
             </div>
             <div class="inputbox">
-                <input type="text" id="email" required>
+                <input type="text" id="email" name="email" required>
                 <label for="email">Email</label>
             </div>
         </div>
         <div class="row">
             <div class="inputbox">
-                <input type="text" id="cep" required>
+                <input type="text" id="cep" name="cep" required>
                 <label for="cep">CEP</label>
             </div>
             <div class="inputbox">
-                <input type="text" id="endereco" required>
+                <input type="text" id="endereco" name="endereco" required>
                 <label for="endereco">Endereço</label>
             </div>
             <div class="inputbox">
-                <input type="text" id="numero" required>
+                <input type="number" id="numero" name="numero" required>
                 <label for="numero">Número</label>
             </div>
             <!-- </div> -->
             <!-- <div class="row"> -->
             <div class="inputbox">
-                <input type="text" id="bairro" required>
-                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="bairro" required>
+                <label for="bairro">Bairro</label>  
             </div>
             <div class="inputbox">
-                <input type="text" id="cidade" required>
+                <input type="text" id="cidade" name="cidade" required>
                 <label for="cidade">Cidade</label>
             </div>
             <div class="inputbox">
-                <input type="text" id="estado" required>
+                <input type="text" id="estado" name="estado" required>
                 <label for="estado">Estado</label>
             </div>
         </div>
         <div class="row">
-            <button id="btn">Salvar</button>
+            <button id="btn" type="submit">Salvar</button>
         </div>
-    </main>
+    </form>
     <footer>
         euluis-dev
     </footer>
