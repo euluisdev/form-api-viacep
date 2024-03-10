@@ -9,6 +9,12 @@
                 $bairro = filter_var($_POST['bairro'], FILTER_SANITIZE_STRING);
                 $cidade = filter_var($_POST['cidade'], FILTER_SANITIZE_STRING);
                 $estado = filter_var($_POST['estado'], FILTER_SANITIZE_STRING);
-                
+
+                define('HOST', 'localhost');
+                define('USER', 'root');
+                define('PASS', '');
+                define('BASE', 'viacep');
+
+                $conn =  new mysqli(HOST, USER, PASS, BASE);
                 break;
-            }
+        }
