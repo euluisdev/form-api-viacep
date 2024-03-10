@@ -1,4 +1,4 @@
-# PesquisarCep
+# Consumindo API viaCep em js orientado à objeto.
 
 Um aplicativo JavaScript simples para pesquisar e completar informações de endereço a partir de um CEP usando a API do ViaCEP.
 
