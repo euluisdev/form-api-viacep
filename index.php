@@ -11,7 +11,7 @@
 
 <body>
     <form id="formulario" action="./salvar-form.php" method="POST" class="container">
-        <input type="hidden" name="acao" value="Cadastrar">
+        <input type="hidden" name="acao" value="cadastrar">
         <h1 class="title">Cadastro</h1>
         <div class="row">
             <div class="inputbox">
@@ -33,7 +33,7 @@
                 <label for="endereco">Endereço</label>
             </div>
             <div class="inputbox">
-                <input type="number" id="numero" name="numero" required>
+                <input type="text" id="numero" name="numero" required>
                 <label for="numero">Número</label>
             </div>
 
